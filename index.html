@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jonathan Adamski | programmer, designer, human</title>
+
+
+<!--
+
+
+  HEY - READ THIS 
+  I know that my CSS and JS should be in external files.  However, I'm willing to bet if you're reading this,
+  you're a recruiter of some kind. It's a whole lot easier if it's all in one place for you to see, isn't it?
+  So, you're welcome - now just don't criticize me for not putting it in external files.  Normally I would :)
+
+
+-->
+
+
+<style type="text/css">
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li, ol, div, label, input, textarea, fieldset {
+	padding: 0;
+	margin: 0;
+}
+fieldset {
+	border: none;
+}
+label {
+	display: block;
+}
+body {
+	background: url(img/bg-fade.png) center 60px no-repeat;
+	background-color: #ffa200;
+}
+body, p, li, label, h4 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	color: #3b3b3b;
+}
+h1, h2, h3 {
+	text-indent: -9999px;
+	height: 0px;
+}
+p, li {
+	margin-bottom: 10px;
+}
+li {
+	list-style: none;
+}
+a,
+a:link,
+a:visited,
+a:active {
+	color: #0196f4;
+}
+a:hover {
+	text-decoration: none;
+	color: #0079c6;
+}
+a img {
+	border: none;
+}
+#header {
+	background: url(img/logo.png) 10px 10px no-repeat #000;
+	height: 62px;
+	width: 100%;
+}
+#header a {
+	float: right;
+	margin: 10px 10px 0px 0px;
+}
+#swoop {
+	height: 21px;
+	width: 100%;
+	background: url(img/bg-angle.png) top left no-repeat;
+}
+.section {
+	width: 704px;
+	height: 386px;
+	margin: 0 auto;
+	position: relative;
+	top: 0px;
+	right: -9999px;
+}
+.content {
+	position: absolute;
+	overflow: hidden;
+}
+
+/* about */
+#about {
+	background: url(img/bg-about.png) top center no-repeat;
+}
+#about .carousel {
+	width: 338px;
+	height: 338px;
+	overflow: hidden;
+	position: absolute;
+	top: 24px;
+	left: 18px;
+}
+#about .content {
+	top: 58px;
+	left: 369px;
+	width: 285px;
+	height: 304px;
+}
+
+
+/* contact */
+#contact {
+	background: url(img/bg-contact.png) top center no-repeat;
+}
+#contact .content {
+	top: 80px;
+	left: 453px;
+	width: 235px;
+	height: 265px;
+}
+#contact input,
+#contact textarea {
+	width: 229px;
+	border: 1px solid #ddd;
+	padding: 2px;
+	color: #333;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+}
+#contact #email,
+#contact #rbt {
+	margin-bottom: 10px;
+}
+#contact #message {
+	height: 90px;
+	margin-bottom: 10px;
+}
+#contact #send {
+	cursor: pointer;
+	float: right;
+	width: 68px;
+	height: 26px;
+	background: url(img/btn-send.png) top center no-repeat;
+	font-family: Tahoma, Geneva, sans-serif;
+	text-transform: lowercase;
+	color: #fff;
+	font-size: 11px;
+	border: none;
+	padding: 0px;
+}
+#contact #send:hover {
+	background-position: bottom center;
+}
+
+
+/* skills */
+#skills {
+	background: url(img/bg-skills.png) top center no-repeat;
+}
+#skills .content {
+	top: 75px;
+	left: 36px;
+	height: 280px;
+	width: 645px;
+}
+#skills .col {
+	width: 310px;
+	float: left;
+}
+#skills #col1 {
+	margin-right: 10px;
+}
+#skills p {
+	margin-bottom: 30px;
+}
+
+
+/* projects */
+#projects {
+	background: url(img/bg-projects.png) top center no-repeat;
+}
+#projects .content {
+	top: 65px;
+	left: 30px;
+	width: 355px;
+	height: 290px;
+	line-height: 1.65em;
+}
+#projects h4 {
+	margin-top: 20px;
+}
+
+
+/* clients */
+#clients {
+	background: url(img/bg-clients.png) top center no-repeat;
+	text-indent: -9999px;
+}
+
+
+/* resume */
+#resume {
+	position: fixed;
+	bottom: -77px;
+	background: url(img/bg-resume.png) top center no-repeat;
+	height: 102px;
+	width: 100%;
+}
+#resume-toggle {
+	display: block;
+	height: 26px;
+	width: 45px;
+	margin: 0 auto;
+	text-indent: -9999px;
+}
+#resume .content {
+	width: 182px;
+	margin: 32px auto 0px auto;
+	position: relative;
+}
+#resume p {
+	color: #fff;
+	margin: 0;
+}
+
+
+
+
+/* helpers */
+#nav {
+	position: fixed;
+	top: 50%;
+	display: block;
+	width: 100%;
+}
+#nav li,
+#nav a {
+	width: 37px;
+	display: block;
+	height: 43px;
+	margin: 0;
+}
+#nav a {
+	background: url(img/bg-arrows.png) no-repeat top left;
+	text-indent: -9999px;
+	height: 43px;
+	width: 37px;
+}
+#nav #prev {
+	float: left;
+}
+#nav #next {
+	float: right;
+}
+#nav #next a {
+	background-position: 0px -45px;
+}
+#container {
+	position: relative;
+	margin: 20px auto 0px auto;
+	width: 100%;
+	height: 386px;
+	overflow: hidden;
+	display: none;
+}
+.carousel img {
+	float: left;
+}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script type="text/javascript" src="js/jquery.color.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+var COLORS = ["#ffa200", "#c4d500", "#ed004e", "#ba00d0", "#00a594", "#f4ac00"];
+var ENTER_SPEED = 3000;
+var EXIT_SPEED = 500;
+var RESUME_SPEED = 500;
+var BG_SPEED = 1000;
+var curItem = 1;
+$(document).ready(function() {
+	$("body").css("background-color", COLORS[curItem-1]);
+	$("#container").show();
+	var numItems = $(".section").length;
+	function animateBG() {
+		$("body").animate({backgroundColor: COLORS[curItem-1]}, BG_SPEED);
+	}
+	function move(dir) {
+		if(dir == 0) {
+			return;
+		}
+		var prevItem = curItem;
+		var future = curItem + dir;
+		if(future < 1) {
+			curItem = numItems;
+		}
+		else if(future > numItems) {
+			curItem = 1;
+		}
+		else {
+			curItem = future;
+		}
+		var prev = $(".section:nth-child("+prevItem+")");
+		var next = $(".section:nth-child("+curItem+")");
+		if(dir > 0) {
+			$(".section").css("display", "none").css("left", "auto").css("right", "-9999px");
+			$(prev).css("left", "0px").css("right", "auto").css("display", "block").stop(false).animate({left: -$("#container").width()+"px"}, {duration: EXIT_SPEED, complete: function(){
+					$(prev).css("display", "none");
+					$(next).css("right", -$("#container").width()+"px").css("display", "block").stop(false).animate({right: "0px"}, {easing: "easeOutElastic", duration: ENTER_SPEED, complete: function(){}});
+					animateBG();
+				}
+			});
+		}
+		else {
+			$(".section").css("display", "none").css("left", "auto").css("right", "-9999px");
+			$(prev).css("right", "0px").css("left", "auto").css("display", "block").stop(false).animate({right: -$("#container").width()+"px"}, {duration: EXIT_SPEED, complete: function(){
+					$(prev).css("display", "none");
+					$(next).css("left", -$("#container").width()+"px").css("display", "block").stop(false).animate({left: "0px"}, {easing: "easeOutElastic", duration: ENTER_SPEED, complete: function(){}});
+					animateBG();
+				}
+			});
+		}
+	}
+	$("#next a").click(function() {
+		move(1);
+		return false;
+	});
+	$("#prev a").click(function() {
+		move(-1);
+		return false;
+	});
+	$("#jumpToContact").click(function() {
+		move(1);
+		return false;
+	});
+	$(".section:nth-child(1)").css("right", "0px");
+	
+	
+	var hiddenY = $("#resume").css("bottom");
+	var visibleY = "-10px";
+	var RESUME_HIDDEN = true;
+	$("#resume-toggle").click(function() {
+		if(RESUME_HIDDEN) {
+			$("#resume").animate({bottom: visibleY}, {duration: RESUME_SPEED, complete: function(){}});
+		}
+		else {
+			$("#resume").animate({bottom: hiddenY}, {duration: RESUME_SPEED, complete: function(){}});
+		}
+		RESUME_HIDDEN = !RESUME_HIDDEN;
+		return false;
+	});
+	
+	$("#send").click(function() {
+		$.ajax({
+			type: "POST",
+			url: "contact.php",
+			data: "send=true&email="+$("#email").val()+"&rbt="+$("#rbt").val()+"&message="+$("#message").val(),
+			success: function(msg){
+				var json = $.parseJSON(msg);
+				if(json.success == "true") {
+					$("#contactForm").get(0).reset();
+				}
+				alert(json.msg);
+			},
+			error: function(msg) {
+				alert("An error occurred.  Please try again.");
+			}
+		});
+		return false;
+	});
+});
+//]]>
+</script>
+</head>
+<body>
+<div id="header">
+	<h1>Jonathan Adamski</h1>
+    <h2>Programmer, designer, human</h2>
+	<a href="/archive/2009/"><img src="img/flash.jpg" alt="Miss the Flash version?  It's still available..." /></a>
+</div>
+<div id="swoop"></div>
+<noscript>It is no longer acceptable to have JavaScript turned off.  You're killing the Internet.  Quit it.</noscript>
+<div id="container">
+  <div class="section" id="about">
+    	<div class="carousel">
+        	<img src="img/me.jpg" alt="" />
+        </div>
+        <div class="content">
+        	<h3>About me</h3>
+            <ul>
+	            <li>Work for OnStar/GM featured at the Consumer Electronics Show.</li>
+    	        <li>Recognized for excellence in team social coordination; promoted to Creative Designer and social coordinator.</li>
+        	    <li>Created and instructed a high school Web Design course while a sophomore in high school.</li>
+            	<li>Awarded two second-place awards in regional computer design competition; same designs later awarded fifth and sixth place in statewide competition.</li>
+	            <li>Awarded a certificate of accomplishment by the United States House of Representatives for excellence in the field of Web Design for two years of independent study.</li>
+    	        <li>Accepted into and later graduated from Lawrence Technological University's Computer Science program.</li>
+            </ul>
+        </div>
+	</div>
+    <div class="section" id="skills">
+        <div class="content">
+        	<h3>Skills</h3>
+            <div class="col" id="col1">
+            	<h4>ActionScript 2, 3 (Flash, Flex, Air)</h4>
+                <p>encapsulation, inheritance, polymorphism, physics simulations, particle systems, REST/SOAP Web services</p>
+                
+                <h4>PHP 4, 5</h4>
+                <p>Joomla, WordPress, Drupal, custom content management systems, REST/SOAP Web services</p>
+                
+                <h4>JavaScript</h4>
+                <p>jQuery, Prototype, YUI, AJAX, JSON, Twitter API, Google API, REST/SOAP Web services</p>
+                
+                <h4>HTML5, HTML4, XHTML, CSS 2, 3</h4>
+                <p>Standards compliance, browser compatibility, search engine optimization, social media</p>
+            </div>
+            <div class="col">
+            	<h4>MySQL, MSSQL, Oracle</h4>
+                <p>Stored procedures, query optimization, data integrity, transactions</p>
+                
+                <h4>Adobe Creative Suite</h4>
+                <p>Photoshop, Illustrator, Fireworks, Flash, Flex, Flash Builder, Dreamweaver, Premiere</p>
+                
+                <h4>Java/Android OS</h4>
+                <p>Swing, AWT, custom classes, encapsulation, inheritance, polymorphism</p>
+                
+                <h4>Minor technologies and various acronyms</h4>
+                <p>C#, C++, C, Perl, Python, Ruby on Rails, XML, ASP, .NET, VisualBasic, MS Office, Visio</p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="clients">
+    	<div class="content">
+        	<h3>Clients and Employers</h3>
+            <ul>
+            	<li>OnStar</li>
+                <li>Dodge</li>
+                <li>Blue Cross Blue Shield of Michigan</li>
+                <li>Axeda</li>
+                <li>Ford Motor Company</li>
+				<li>Scion</li>
+                <li>Volkswagen</li>
+                <li>Raytheon</li>
+                <li>Chrysler</li>
+                <li>General Motor Company</li>
+                <li>Jeep</li>
+            </ul>
+		</div>
+	</div>
+    <div class="section" id="projects">
+    	<div class="content">
+        	<h3>Projects</h3>
+            <p>It's a funny thing about the creative industry; employers want to see work samples and then hand you a nondisclosure agreement barring you from discussing your work.  One must wonder if they expect you to honor their agreement when they ask you not to honor others'.</p>
+            <p>I do honor my agreements. My professional integrity has afforded me the good fortune to work on projects whose scale and impact necessitates secrecy as much as it does my technical expertise.</p>
+            <p>In a very real way, there are products and technologies whose existence may not have been possible without my contributions.  I take great pride in that and want to continue working on the cutting edge of various industries, implementing technologies not yet seen outside of the lab.</p>
+            <h4>How to obtain work samples</h4>
+            <p>I have been given special permission to grant private access to some of these projects.  I will be happy to share them - just <a id="jumpToContact" href="#contact">contact me</a>.</p>
+        </div>
+    </div>
+    <div class="section" id="contact">
+    	<div class="content">
+            <h3>Contact me</h3>
+            <p>Please fill out the form below and I will get back to you as soon as possible!</p>
+            <form method="post" target="_blank" action="contact.php" id="contactForm">
+                <fieldset>
+                    <label for="email">Your email address:</label>
+                    <input type="text" id="email" name="email" />
+                </fieldset>
+                
+                <fieldset>
+                    <label for="message">Your message:</label>
+                    <textarea cols="21" rows="5" id="message" name="message"></textarea>
+                </fieldset>
+                
+                <fieldset>
+                	<label for="rbt">Are you a human? (Type 'yes')</label>
+                    <input type="text" id="rbt" name="rbt" />
+                </fieldset>
+                
+                <fieldset>
+                    <input type="submit" id="send" name="send" value="Send" />
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="resume">
+    <a href="#" id="resume-toggle">Toggle</a>
+	<div class="content">
+        <p><a href="/resume.doc" target="_blank">Download</a> (DOC)</p>
+    </div>
+</div>
+<ul id="nav">
+	<li id="prev"><a href="#">Previous</a></li>
+    <li id="next"><a href="#">Next</a></li>
+</ul>
+</body>
+</html>
